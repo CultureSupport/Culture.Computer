@@ -1,0 +1,88 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ubuntu Interface</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Glassmorphism Effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Mobile Wrapper styling */
+        .phone-wrapper {
+            width: 400px;
+            height: 800px;
+            border-radius: 40px;
+            overflow: hidden;
+            background: #2c001e; /* Classic Ubuntu Purple */
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        body {
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Ubuntu', sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Mobile Device Frame -->
+    <div class="phone-wrapper flex flex-col">
+        
+        <!-- Status Bar -->
+        <div class="h-8 w-full flex justify-between items-center px-6 text-white text-xs font-medium">
+            <span>16:03</span>
+            <div class="flex gap-2">
+                <span>Wi-Fi</span>
+                <span>Battery</span>
+            </div>
+        </div>
+
+        <!-- Glassmorphic Section Header -->
+        <header class="glass m-4 p-5 rounded-3xl text-white">
+            <h1 class="text-2xl font-bold">Workspace</h1>
+            <p class="text-sm opacity-80">Welcome back, User</p>
+        </header>
+
+        <!-- Main Content Workspace -->
+        <main class="flex-grow p-4 flex flex-col gap-4">
+            <!-- App GUI Card -->
+            <div class="glass flex-grow rounded-3xl p-6 flex flex-col gap-4 text-white">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-500 flex items-center justify-center font-bold text-xl">U</div>
+                    <div>
+                        <h2 class="font-semibold">Terminal</h2>
+                        <p class="text-xs opacity-70">bash — 80x24</p>
+                    </div>
+                </div>
+                <div class="bg-black/40 rounded-2xl p-4 font-mono text-sm overflow-hidden h-40">
+                    <p class="text-green-400">user@ubuntu:~$ <span class="animate-pulse">_</span></p>
+                </div>
+            </div>
+
+            <!-- Dock Area -->
+            <div class="glass h-20 rounded-3xl flex justify-around items-center px-4">
+                <div class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center">📁</div>
+                <div class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center">🌐</div>
+                <div class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center">⚙️</div>
+                <div class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center">💬</div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
+
